@@ -43,7 +43,6 @@ body {
 }
 .component__general-information-container--description {
   font-size: 13px;
-  /* margin-bottom: 15px; */
   color: hsl(214, 17%, 51%);
 }
 .component__general-information-container--user {
@@ -54,8 +53,9 @@ body {
 footer {
   padding: 20px 30px;
   background-color: transparent;
-  /* position: relative;
-  z-index: 2; */
+}
+.footer.backgroundChanger {
+  background-color: transparent;
 }
 .component__general-information-container--user-information {
   display: flex;
@@ -98,23 +98,24 @@ footer {
   background-color: hsl(217, 19%, 35%);
   position: absolute;
   z-index: 3;
-  right: -50px;
+  right: -55px;
   bottom: 85px;
   padding: 10px 15px;
   border-radius: 10px;
 }
-.triangle {
-  display: none;
-}
-.triangle.effSeeMore {
-  display: block;
+.component__general-information-container--user-soc-media-container.seeMore::after {
+  content: "";
   position: absolute;
-  right: 28px;
-  bottom: 80px;
-  width: 30px;
-  height: 30px;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 20px;
+  height: 20px;
   background-color: hsl(217, 19%, 35%);
-  transform: rotate(45deg);
+  z-index: 0;
+}
+.component__general-information-container--user-information.hide {
+  display: flex;
 }
 
 .component__general-information-container--user-soc-media-container a {
@@ -126,15 +127,10 @@ footer {
   color: hsl(210, 46%, 95%);
   margin-right: 15px;
 }
-/* ========================================== */
-/* ========================================== */
-/* ========================================== */
-/* ========================================== */
 
 @media (max-width: 700px) {
   .component {
     max-width: 350px;
-
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     gap: 0px;
@@ -205,18 +201,17 @@ footer {
     align-items: center;
   }
   .component__general-information-container--user-soc-media-container.seeMore {
-    background-color: transparent;
+    display: flex;
+    align-items: center;
+    background-color: hsl(217, 19%, 35%);
     position: static;
-
-    padding: 8px 0px;
-    border: none;
+    padding: 10px 15px;
   }
-
+  .component__general-information-container--user-soc-media-container.seeMore::after {
+    display: none;
+  }
   .component__general-information-container--user-soc-media-container a {
     margin-right: 10px;
     color: white;
-  }
-  .triangle {
-    display: none;
   }
 }
