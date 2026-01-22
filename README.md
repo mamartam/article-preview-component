@@ -38,3 +38,4 @@ While the project is fully functional, here are some areas for future enhancemen
 - Smooth Transitions: Add CSS transitions/animations for the tooltip appearance (opacity and transform) to make the UI feel more polished and fluid.
 
 ## 🍿 Video
+https://github.com/user-attachments/assets/e41a1bca-09b4-4a71-97cb-5578b7a98054
